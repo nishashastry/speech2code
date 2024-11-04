@@ -1,71 +1,43 @@
-# speech2code README
+##✨ Inspiration  
+The tech world can feel out of reach for individuals with physical disabilities that hinder traditional keyboard or mouse use. We were inspired by the desire to create a more accessible environment where anyone, regardless of physical limitations, can participate in software development. By leveraging AI-powered speech recognition and Intel AI PCs, we aim to remove barriers and make coding an inclusive activity for all.
 
-This is the README for your extension "speech2code". After writing up a brief description, we recommend including the following sections.
+## 🖥️ What It Does  
+CodeWhisperer is a VSCode extension that transforms spoken words into code, enabling users to code hands-free. With CodeWhisperer, users can:
+- **Voice-Activated Coding**: Simply speak what you want to implement, and CodeWhisperer converts your speech into text and generates the corresponding code using a Large Language Model (LLM).
+- **Language Agnostic**: Supports a variety of programming languages, making it suitable for diverse coding tasks.
+- **Filler Word Removal**: Automatically removes unnecessary filler words from spoken commands, ensuring clean and concise input for code generation.
+- **Focus on Higher-Level Ideas**: By minimizing the emphasis on syntax, users can concentrate on their coding concepts and logic rather than getting bogged down by typing syntax.
 
-## Features
+## 🛠️ How We Built It  
+We developed CodeWhisperer by integrating several key technologies:  
+- **Speech-to-Text**: Advanced speech recognition software is employed to accurately capture and convert user commands into text. We are utilizing the QuartzNet 15x15 model for automatic speech recognition. This specific model is based on Jasper, a neural acoustic end-to-end architecture trained with Connectionist Temporal Classification (CTC) loss.
+- **Large Language Models**: The transcribed text is processed through a Large Language Model (LLM) specifically trained to understand programming context and generate relevant code.  
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+### Tech Stack  
+- **Front End**:  
+  - **VSCode Extension**: Developed to provide a seamless integration with the coding environment.  
+  - **TypeScript**: Used for type safety and improved code quality in our extension.  
+- **Back End**:  
+  - **Flask**: Serves as the web framework to handle requests and manage the application logic.  
+  - **Gemini API**: Employed for code conversion, processing the transcribed text into functional code.  
+  - **Intel AI PC**: Our backend server operates on an Intel AI PC, leveraging both CPU and NPU for enhanced performance.  
+  - **Intel AI Tools**: We utilize OpenVINO for preprocessing, inference, and decoding tasks, optimizing the overall efficiency of the application.  
 
-For example if there is an image subfolder under your extension project workspace:
+By leveraging these technologies, we ensured a robust and efficient system for transforming voice commands into executable code.
 
-\!\[feature X\]\(images/feature-x.png\)
+## ⚠️ Challenges We Ran Into  
+One of the main challenges was ensuring the accuracy of both speech-to-text conversion and generating correct code from the LLM. We focused on model selection, prompt engineering, and postprocessing to clean and refine the LLM output, ensuring the generated code was precise and functional. Additionally, as this was our first time creating a VSCode extension, we had to learn its structure, API, and testing processes, which took time to master. We also faced difficulties with running the backend server on the AI PC separately from the user-facing side, ensuring seamless communication and smooth real-time operation.
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## 🏆 Accomplishments That We're Proud Of  
+We’re proud to have created a solution that makes coding more accessible through AI, breaking down barriers for those with physical limitations. The development of a fully functional VSCode extension that integrates voice commands for both code generation and navigation has significantly enhanced the overall user experience. Additionally, running CodeWhisperer on Intel AI PCs allows us to efficiently scale AI models, ensuring smooth performance and responsiveness throughout the coding process.
 
-## Requirements
+## 📚 What We Learned  
+Throughout this project, we learned about the intricacies of developing AI-driven speech-to-code systems and the importance of optimization for real-time responsiveness. We also deepened our understanding of the VSCode extensions.
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+## 🚀 What's Next for CodeWhisperer  
+In the future, we aim to:
 
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+- **Multi-File Projects**: Support for managing complex projects, such as creating a React App, using voice commands.  
+- **Eye Tracking or Cursor Movement Commands**: Hands-free control through eye tracking or cursor movements.  
+- **Enhance Speech Recognition**: Improve accuracy for various dialects and accents.  
+- **Intelligent Suggestions**: Develop capabilities to assist users in debugging code through voice commands.  
