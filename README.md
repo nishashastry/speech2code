@@ -1,4 +1,4 @@
-##✨ Inspiration  
+## ✨ Inspiration  
 The tech world can feel out of reach for individuals with physical disabilities that hinder traditional keyboard or mouse use. We were inspired by the desire to create a more accessible environment where anyone, regardless of physical limitations, can participate in software development. By leveraging AI-powered speech recognition and Intel AI PCs, we aim to remove barriers and make coding an inclusive activity for all.
 
 ## 🖥️ What It Does  
